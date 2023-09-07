@@ -1,12 +1,7 @@
 "use client";
 
 import { usePost } from "@/hooks/use-post";
-import { Metadata } from 'next'
 import Loading from "../Loading";
-
-export const metadata: Metadata = {
-  title: '',
-}
 
 type PageProps = {
   params : {
