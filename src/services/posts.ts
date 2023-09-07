@@ -5,11 +5,11 @@ import { Post } from '../types/Post'
 const API = process.env.NEXT_PUBLIC_JSONPLACEHOLDER_API
 
 class PostService {
-  async Posts() {
+  async getPosts() {
     return await axios.get<Post[]>(`${API}/posts`)
   }
 
-  async Post({ id }: { id: number | string }) {
+  async getPost({ id }: { id: number | string }) {
     return await axios.get<Post>(`${API}/posts/${id}`)
   }
 
