@@ -12,7 +12,7 @@ export function usePost({postId} : {postId: number | string}) {
     setIsLoading(true);
     setError(undefined);
     setPost(undefined);
-    PostService.Post({ id: postId })
+    PostService.getPost({ id: postId })
       .then((res) => setPost(res.data))
       .catch((err) => {
         console.error(err);

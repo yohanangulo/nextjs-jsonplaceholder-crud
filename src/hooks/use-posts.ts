@@ -11,7 +11,7 @@ export function usePosts() {
     setIsLoading(true);
     setError(undefined);
     setPosts([]);
-    PostService.Posts()
+    PostService.getPosts()
       .then((res) => setPosts(res.data))
       .catch((err) => {
         console.error(err);
